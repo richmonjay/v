@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagesDiv = document.querySelector('.images');
     const letterDiv = document.querySelector('.letter');
     const letterText = letterDiv.querySelector('p');
+    const backgroundMusic = document.getElementById('background-music');
 
     let noClickCount = 0;
 
@@ -87,6 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     letterDiv.style.display = 'block';
                     letterDiv.classList.add('show');
                     typeWriterEffect(letterText);
+                    // Play the background music starting at 0 seconds
+                    backgroundMusic.currentTime = 0;
+                    backgroundMusic.play();
                 }, 2000); // Adjust the delay as needed
 
             }, 500); // Match the transition duration
